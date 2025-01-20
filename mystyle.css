@@ -1,0 +1,266 @@
+
+.hidden {
+  display: none;
+}
+
+.save-button {
+  background: linear-gradient(135deg, #6e6e6e, #9e9e9e);
+  color: white;
+}
+body {
+  margin: 0;
+  font-family: 'Roboto', Arial, sans-serif;
+  background: linear-gradient(135deg, #121212, #282828);
+  color: #e0e0e0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.app-container {
+  max-width: 600px;
+  width: 95%;
+  margin: 20px auto;
+  padding: 20px;
+  background: #1f1f1f;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+  border-radius: 15px;
+  animation: fadeIn 0.8s ease;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 32px;
+  color: #f5f5f5;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+header p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #bbbbbb;
+}
+
+.app-logo {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.8));
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  padding: 1px;
+  border: 2px solid #333;
+  border-radius: 8px;
+  resize: none;
+  font-size: 16px;
+  background: #121212;
+  color: #e0e0e0;
+  box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.6);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #6e6e6e;
+  box-shadow: 0 0 10px rgba(110, 110, 110, 0.5);
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #333;
+  color: #e0e0e0;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.add-button {
+  background: #444;
+}
+
+.clear-button {
+  background: #555;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px;
+  margin-bottom: 10px;
+  border: 1px solid #333;
+  border-radius: 8px;
+  background-color: #1f1f1f;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  animation: slideIn 0.5s ease;
+  position: relative;
+}
+
+@keyframes slideIn {
+  from {
+      opacity: 0;
+      transform: translateX(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateX(0);
+  }
+}
+
+.note-number {
+  font-weight: bold;
+  font-size: 18px;
+  color: #bbbbbb;
+  flex-shrink: 0;
+}
+
+.note-content {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+li .note-time {
+  font-size: 12px;
+  color: #888888;
+}
+
+li button {
+  background-color: transparent;
+  border: none;
+  color: #bbbbbb;
+  cursor: pointer;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+li button:hover {
+  color: #e0e0e0;
+}
+
+.edit-button {
+  color: #6e6e6e;
+  margin-left: auto;
+}
+
+.edit-button:hover {
+  color: #bbbbbb;
+}
+/* styles.css */
+
+@keyframes fadeOut {
+  from {
+      opacity: 1;
+      transform: scale(1);
+  }
+  to {
+      opacity: 0;
+      transform: scale(0.9);
+  }
+}
+
+@keyframes slideOut {
+  from {
+      opacity: 1;
+      transform: translateX(0);
+  }
+  to {
+      opacity: 0;
+      transform: translateX(100%);
+  }
+}
+
+li.deleted {
+  animation: slideOut 0.5s ease forwards;
+}
+
+li.deleted.fade {
+  animation: fadeOut 0.5s ease forwards;
+}
+
+.copy-button {
+  background: black; 
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.copy-button:hover {
+  background-color: #45a049;
+}
+
+.toast {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s ease-in-out;
+}
+
+.toast.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+
+
+
