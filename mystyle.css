@@ -2,7 +2,6 @@
 .hidden {
   display: none;
 }
-
 .save-button {
   background: linear-gradient(135deg, #6e6e6e, #9e9e9e);
   color: white;
@@ -17,7 +16,6 @@ body {
   align-items: center;
   min-height: 100vh;
 }
-
 .app-container {
   max-width: 600px;
   width: 95%;
@@ -143,7 +141,6 @@ li {
   animation: slideIn 0.5s ease;
   position: relative;
 }
-
 @keyframes slideIn {
   from {
       opacity: 0;
@@ -154,14 +151,12 @@ li {
       transform: translateX(0);
   }
 }
-
 .note-number {
   font-weight: bold;
   font-size: 18px;
   color: #bbbbbb;
   flex-shrink: 0;
 }
-
 .note-content {
   display: flex;
   flex-direction: column;
@@ -194,8 +189,6 @@ li button:hover {
 .edit-button:hover {
   color: #bbbbbb;
 }
-/* styles.css */
-
 @keyframes fadeOut {
   from {
       opacity: 1;
@@ -206,7 +199,6 @@ li button:hover {
       transform: scale(0.9);
   }
 }
-
 @keyframes slideOut {
   from {
       opacity: 1;
@@ -217,16 +209,13 @@ li button:hover {
       transform: translateX(100%);
   }
 }
-
 li.deleted {
   animation: slideOut 0.5s ease forwards;
 }
-
 li.deleted.fade {
   animation: fadeOut 0.5s ease forwards;
 }
-
-.copy-button {
+  .copy-button {
   background: black; 
   color: white;
   border: none;
@@ -235,11 +224,9 @@ li.deleted.fade {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-
 .copy-button:hover {
   background-color: #45a049;
 }
-
 .toast {
   position: fixed;
   bottom: 20px;
@@ -254,7 +241,6 @@ li.deleted.fade {
   opacity: 0;
   transition: visibility 0s, opacity 0.5s ease-in-out;
 }
-
 .toast.show {
   visibility: visible;
   opacity: 1;
