@@ -103,19 +103,6 @@ notesList.appendChild(noteItem);
       copyToast.classList.remove("show");
   }, 3000);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-// Function to save notes to localStorage
 function saveNotesToLocalStorage() {
     localStorage.setItem("notes", JSON.stringify(notes));
 }
